@@ -24,5 +24,10 @@ namespace A_Level_Library_Project
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
