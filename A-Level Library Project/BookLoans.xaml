@@ -1,0 +1,22 @@
+﻿<Window x:Class="A_Level_Library_Project.BookLoans"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A_Level_Library_Project"
+        mc:Ignorable="d"
+        Title="Book Loans" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="bookList" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="500" SelectionChanged="BookList_SelectionChanged">
+            <ListBoxItem Content="The Lord Of The Rings"/>
+            <ListBoxItem Content="The Two Towers"/>
+            <ListBoxItem Content="The Return Of The King"/>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Left" Margin="535,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Height="50"><Run Text="You do not currently have a"/><Run Text=" "/><Run Text="book loaned out"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="630,150,0,0" TextWrapping="Wrap" Text="Stock: ?" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="btnReserve" Content="Reserve" HorizontalAlignment="Left" Margin="595,260,0,0" VerticalAlignment="Top" Width="120" Height="40" IsEnabled="False"/>
+        <Button x:Name="btnLoan" Content="Loan" HorizontalAlignment="Left" Margin="595,310,0,0" VerticalAlignment="Top" Width="120" Height="40" IsEnabled="False"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="595,370,0,0" VerticalAlignment="Top" Width="120" IsCancel="True" Click="btnBack_Click"/>
+
+    </Grid>
+</Window>

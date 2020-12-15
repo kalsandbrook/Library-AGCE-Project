@@ -51,6 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,7 +71,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BookLoans.xaml.cs">
+      <DependentUpon>BookLoans.xaml</DependentUpon>
+    </Compile>
+    <Page Include="LoginForm.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -78,18 +85,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LibraryDatabaseDataSet.cs">
-      <DependentUpon>LibraryDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LibraryDatabaseDataSet.Designer.cs">
+    <Compile Include="LibraryDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LibraryDatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="LoginForm.xaml.cs">
+      <DependentUpon>LoginForm.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BookLoans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -109,16 +121,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="LibraryDatabaseDataSet.xsc">
-      <DependentUpon>LibraryDatabaseDataSet.xsd</DependentUpon>
+    <None Include="LibraryDBDataSet.xsc">
+      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LibraryDatabaseDataSet.xsd">
+    <None Include="LibraryDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LibraryDatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>LibraryDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="LibraryDatabaseDataSet.xss">
-      <DependentUpon>LibraryDatabaseDataSet.xsd</DependentUpon>
+    <None Include="LibraryDBDataSet.xss">
+      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,12 +153,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LibraryDatabase.mdf">
+    <Content Include="LibraryDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LibraryDatabase_log.ldf">
+    <Content Include="LibraryDB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>LibraryDatabase.mdf</DependentUpon>
+      <DependentUpon>LibraryDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

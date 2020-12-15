@@ -33,5 +33,16 @@ namespace A_Level_Library_Project.Properties {
                 return ((string)(this["LibraryDatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\LibraryDB.mdf" +
+            ";Integrated Security=True")]
+        public string LibraryDBConnectionString {
+            get {
+                return ((string)(this["LibraryDBConnectionString"]));
+            }
+        }
     }
 }
