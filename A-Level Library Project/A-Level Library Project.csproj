@@ -77,6 +77,15 @@
     <Compile Include="BookLoans.xaml.cs">
       <DependentUpon>BookLoans.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BookManager.xaml.cs">
+      <DependentUpon>BookManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BookEditor.xaml.cs">
+      <DependentUpon>BookEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager.xaml.cs">
+      <DependentUpon>UserManager.xaml</DependentUpon>
+    </Compile>
     <Page Include="LoginForm.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +108,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BookLoans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BookManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BookEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Main Menu" Height="180" Width="295">
     <Grid>
-        <Button x:Name="btnLoaning" Content="Loaning &#xD;&#xA;  Menu" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="75" Height="40" Click="btnLoaning_Click"/>
-        <Button x:Name="btnManageBooks" Content="Manage&#xD;&#xA;  Books" HorizontalAlignment="Left" Margin="105,50,0,0" VerticalAlignment="Top" Width="75" Height="40"/>
-        <Button x:Name="btnManageUsers" Content="Manage &#xD;&#xA;  Users" HorizontalAlignment="Left" Margin="200,50,0,0" VerticalAlignment="Top" Width="75" Height="40"/>
+        <Button x:Name="btnLoaning" Content="Loaning &#xD;&#xA;  Menu" Margin="10,50,202,0" VerticalAlignment="Top" Height="40" Click="btnLoaning_Click"/>
+        <Button x:Name="btnManageBooks" Content="Manage&#xD;&#xA;  Books" HorizontalAlignment="Left" Margin="105,50,0,0" VerticalAlignment="Top" Width="75" Height="40" Click="btnManageBooks_Click"/>
+        <Button x:Name="btnManageUsers" Content="Manage &#xD;&#xA;  Users" Margin="200,50,12,0" VerticalAlignment="Top" Height="40" Click="btnManageUsers_Click"/>
         <Label Content="Choose a module:" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="105,109,0,0" VerticalAlignment="Top" Width="75" Click="btnLogout_Click"/>
 

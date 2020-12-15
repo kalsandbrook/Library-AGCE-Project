@@ -37,5 +37,19 @@ namespace A_Level_Library_Project
             _LoginForm.Show();
             this.Close();
         }
+
+        private void btnManageBooks_Click(object sender, RoutedEventArgs e)
+        {
+            BookManager _BookManager = new BookManager();
+            _BookManager.Show();
+            this.Close();
+        }
+
+        private void btnManageUsers_Click(object sender, RoutedEventArgs e)
+        {
+            UserManager _UserManager = new UserManager();
+            _UserManager.Show();
+            this.Close();
+        }
     }
 }
