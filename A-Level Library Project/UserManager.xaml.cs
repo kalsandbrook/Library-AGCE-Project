@@ -19,16 +19,36 @@ namespace A_Level_Library_Project
     /// </summary>
     public partial class UserManager : Window
     {
+        List<User> users = new List<User>();
         public UserManager()
         {
             InitializeComponent();
+            DataAccess db = new DataAccess();
+            users = db.GetUsers();
+            UserListbox.ItemsSource = users;
+            UserListbox.DisplayMemberPath = "Username";
+            UserListbox.SelectedValuePath = "Id";
+            
+            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
         {
             MainMenu mainMenu = new MainMenu();
             mainMenu.Show();
             this.Close();
+        }
+
+        private void UserListbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int Selected = (int)UserListbox.SelectedValue;
+            IdBox.Text = Selected.ToString();
+        }
+
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            DataAccess db = new DataAccess();
+            db.AddUser(ForenameBox.Text, SurnameBox.Text, UsernameBox.Text, PasswordBox.Text);
         }
     }
 }

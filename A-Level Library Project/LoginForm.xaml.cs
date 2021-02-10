@@ -21,30 +21,29 @@ namespace A_Level_Library_Project
     /// Interaction logic for MainWindow.xaml
     /// </summary>
 
-    public partial class LoginForm : Window 
+    public partial class LoginForm : Window
     {
-        /*
-        User user1 = new User("Fred", "fred5", "user");
-        User user2 = new User("Jeff", "jeff5", "user");
-        User user3 = new User("Bob", "bob5", "user"); 
-        */
         public LoginForm()
         {
-            
+
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            bool success = HardcodedUsers.CheckLogin(txtUsername.Text.ToLower(), txtPassword.Password);
-            if (success) 
-            { 
-                Console.WriteLine("Login Successful");
-                MainMenu _MainMenu = new MainMenu(); // Init a main menu window
-                _MainMenu.Show();
+            DataAccess db = new DataAccess();
+            string givenUsername = txtUsername.Text;
+            string givenPassword = txtPassword.Password;
+            if(db.CheckLogin(givenUsername, givenPassword))
+            {
+                MainMenu _mainMenu = new MainMenu();
+                _mainMenu.Show();
                 this.Close();
             }
-            else { Console.WriteLine("Login Unsuccessful"); }
+            else
+            {
+                MessageBox.Show("Invalid Login.");
+            }
         }
 
         private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
@@ -60,34 +59,12 @@ namespace A_Level_Library_Project
         {
             if ((txtUsername == null) || (txtPassword == null)) // Checks if either field are blank, if so, disables the login button.
             {
-                btnLogin.IsEnabled = false; 
+                btnLogin.IsEnabled = false;
             }
             else // BROKEN
             {
                 btnLogin.IsEnabled = true;
             }
         }
-    }
-    public class HardcodedUsers
-    {
-        public static bool CheckLogin(string givenUsername, string givenPassword)
-        {
-            int counter = 0;
-
-            while (counter < usernames.Count)
-            {
-                if (usernames[counter] == givenUsername)
-                {
-                    if (passwords[counter] == givenPassword)
-                    {
-                        return (true);
-                    }
-                }
-                counter++;
-            }
-            return (false);
-        }
-        private static List<string> usernames = new List<string> { "fred", "jeff", "bob" };
-        private static List<string> passwords = new List<string> { "fred5", "jeff5", "bob5" };
     }
 }

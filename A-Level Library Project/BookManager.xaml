@@ -7,11 +7,7 @@
         mc:Ignorable="d"
         Title="BookManager" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="bookList" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="500">
-            <ListBoxItem Content="The Lord Of The Rings"/>
-            <ListBoxItem Content="The Two Towers"/>
-            <ListBoxItem Content="The Return Of The King"/>
-        </ListBox>
+        <ListBox x:Name="bookList" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="500" SelectionChanged="bookList_SelectionChanged"/>
         <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="595,80,0,0" VerticalAlignment="Top" Width="120" Height="40" IsEnabled="True"/>
         <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="595,190,0,0" VerticalAlignment="Top" Width="120" Height="40" IsEnabled="False"/>
         <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="595,250,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>

@@ -8,9 +8,6 @@
         Title="Book Loans" Height="450" Width="800">
     <Grid>
         <ListBox x:Name="bookList" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="500" SelectionChanged="BookList_SelectionChanged">
-            <ListBoxItem Content="The Lord Of The Rings"/>
-            <ListBoxItem Content="The Two Towers"/>
-            <ListBoxItem Content="The Return Of The King"/>
         </ListBox>
         <TextBlock HorizontalAlignment="Left" Margin="535,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Height="50"><Run Text="You do not currently have a"/><Run Text=" "/><Run Text="book loaned out"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="630,150,0,0" TextWrapping="Wrap" Text="Stock: ?" VerticalAlignment="Top" FontSize="16"/>
